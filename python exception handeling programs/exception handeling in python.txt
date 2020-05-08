@@ -1,0 +1,80 @@
+$$ 2 TYPES OF EXCEPTIONS
+1. BUILT IN exceptions
+2. USER DEFINED exceptions 
+
+
+
+$$ 5 imp keywords of exception handeling in Python:
+
+1.try
+2.except
+3.else
+4.raise 
+5.finally 
+  
+ others:
+6.as --  syntex: except Exception as e:
+                     print(e)
+    
+
+$$ functions related to exception  handeling:
+1.exc_info() --used to get  info about exception 
+              --in module "sys"
+	     --returns a tuple having 3 items- type{exception class name},value{exception message/exception object} ,traceback{details of lines where excetption occured}
+
+2.format_exc() --in module "traceback"
+		--in class 'traceback'
+		--returns complete details about exception in the form of string
+		--used when we need to print the details of exception exactly like python does
+
+$$ SYNTEX of "try-except-else" block:
+
+ try:
+    #operations to be perfoemed
+    .
+    .
+ except Exception1:
+    #if exception1 occors in try block, execute this 
+ except Exception2:
+    #if exception2 occors in try block, execute this
+ .
+ .
+ .
+ else:
+    #if no exception occurs then execute this
+
+$$ SYNTEX that handles all kinds of exception:(but the only problem is we will never know the type of exception occured)
+
+ try:
+    #operations to be perfoemed
+    .
+    .
+except:
+    #for every kind of exception this block will execute
+
+$$ the keyword "raise" 
+--  used to forceably generate an exception
+--  syntex:
+	 raise Exception("exception message/ exception object")
+
+
+$$ keyword "finally"
+--the code written inside its block runs in all situations anyhow
+--syntex1 : try-except-finally:
+   try:
+    #operations to be perfoemed
+    .
+    .
+ except:
+    #for every kind of exception this block will execute
+ finally:
+    #code to be always executed
+
+--syntex2: try-finally : 
+    try:
+      #operations to be perfoemed
+      .
+      .
+   finally:
+      #code to be always executed
+   

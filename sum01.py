@@ -1,0 +1,6 @@
+a=input('enter two no.')
+f,s=a.split()
+print('first no. is',f)
+print('second no. is',s)
+b=int(f)+int(s)
+print('the sum is',b)

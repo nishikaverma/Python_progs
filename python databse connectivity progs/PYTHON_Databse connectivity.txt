@@ -1,0 +1,65 @@
+SQL COMMANDS:
+
+1.creating tables:syntex--
+			CREATE TABLE<table name>(coloumn_name_1 coloumn_type1(size),coloumn_name_2 coloumn_type2(size))  ;
+
+2.insert:syntex--
+		INSERT INTO <table name>(coloumn name1,coloumn name2...) VALUES (v1,v2...); 
+		or
+		INSERT INTO <table name> VALUES (v1,v2...);
+3.update:syntex--
+		UPDATE <table name> SET <coloumn name>=<value>,<coloumn name>=<value>,... WHERE <condition>; 
+
+4. delete:syntex--
+		DELETE FROM <table name>;
+		or
+		DELETE FROM <table name>  WHERE <conditiion>;
+
+
+5. select:syntex--
+		SELECT <coloumn name> FROM <table name> WHERE <condition>;
+		or
+   		SELECT * FROM <table name>;
+
+
+SQL OPERATORS:
+
+1.LOGICAL operators: AND ,OR,NOT
+
+2. RELATIONAL operator: > ,< ,>= ,<= ,= ,!=
+
+3.ARTHMATIC operator: +, -, *, /, %
+
+4.SPECIAL OPERATOR: BETWEEN , IN ,LIKE ,IS
+
+
+
+*********************************************************************************************************
+6 imp  steps for database connectivity:
+
+1. importing DBMS module
+2. establishing connection
+3. creating a cursor
+4. executing the query
+5.
+6.
+
+
+***********************************************************************************************************
+&& here for DBMS= Oracle &&
+FUNCTIONS:
+connect()   --syntex: cx_Oracle.connect("connectin details")
+            -- returns 'cx_Oracle .Connection' object,which has:
+                         -attributes : username, version
+			 - methods:    cursor(),close(),commit(),rollback()
+	
+cursor() -- syntex: c=obj.cursor()
+	 -- returns a cursor object,which has:
+                         -attributes : rowcount
+			 - methods:   execute(statment),fetchall(),fetchany(n),fetchone(),close()
+	
+
+execute() -- execut SQL statment and stores its result
+	 -- SYNTEX:
+			cur.execute(SQl statments,parameters,**kwargs)
+

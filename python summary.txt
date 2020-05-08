@@ -1,0 +1,296 @@
+$$$$$ function catagories: $$$$$
+1. built in functions
+2. those which are defined in modules
+3. user defined
+
+$$$$$$normal functions in python:$$$$$$$$$                                                            
+print()---sep=" " , end="\n" 
+bin(a)--returs a string representing binary values  
+oct(a)--returs a string representing octale values
+hex(a)--returs a string representing hexadecimal values
+type() -- shows the data type of any variable (built in function)
+getsizeof() --goves the size of any variable (in sys module)
+len(S) -- returns length of string
+lower() -- returns copy of string into lower case.... s.lower()
+upper()-- retuens copy of string into upper case.... s.upper()
+int()
+float()
+complex()
+bool()
+str()
+id(a) -- returns identity of an object (built in function)
+ord("a") [opposit of chr()] -- returns UNICODE no. of the argument passed(built  in function)
+input()
+pow() ,etc...functions of "math" module
+dir()
+help()
+split(",") {in module 'str'}
+eval()
+format()
+len()
+chr() [opposit of ord() ]
+randit(int,int){in module "random"}
+range(n)/range(m,n)/range(m,n,s),list()
+max()
+min()
+all()
+any()
+sum()
+sorted()
+append()
+extend()
+insert()
+index()
+count()
+remove()
+pop()
+clear()
+sort(reversr,key)[the parameters 'reverse'and 'key' are optional]
+reverse()
+timeit(stmt,setup, timer , number) [in module timeit]
+map()
+super()
+
+now() [method of class 'datetime' in module 'datetime']
+strftime() [method of class 'datetime' in module 'datetime']
+
+setattr(object,"name",value) -- used to set the value of an attribute  of an object
+getattr(object , "name" , [default value])-- returns the  value of an attribute of an object, 
+					      returns default value provided to  this function if no named attribute is found
+					      returns an exception ifno named attribute is found and no default value is provided to it
+__repr__() --lec 43 slide 26
+__del__(self)   -- distructor in python
+__init__(self) -- constructor in python
+
+##FUNCTIONS FOR OPERATIONS IN DICTONARY:
+dict()
+get()- to access values of dictonary using key ,syntex-- print(dictonaty.get(key))
+keys()
+items()
+values()
+update() -to merge dict2 in dict1 by adding new values and oerwridding existing values- mydict1.update(mydict2)
+
+#FUNCTIONS FOR DELETION IN DICTONARY:
+pop(key,[default]*) --{opposit if setdefault()} deletes the value at the given key in dictionary-- dict.pop(key)
+popitem()
+del --  its a keyword
+clear() -- remvesall the itens from dictonary returns nothing
+
+copy()-- dict.copy()
+setdefault(key ,[value]*)-- {opposit of  pop()} adds the value at the given key in dictionary -- dict.stdefault(key
+
+*= optional
+
+$$$ errors in python $$$
+1. syntex error 
+2. runtime error
+
+$$$$  string methods  $$$$$
+1. string compairision
+	-isupper()
+	-islower()
+	-istitle()
+	-isalpha()
+	-isdigit()
+	-isdecimal()
+	-isnumeric()
+	-isalnum()
+	-isspace()
+	-startswith(<prifix>,<start>*,<end>*)
+	-endwith(<suffix>,<start>*,<end>*)
+	
+2. string searching
+	-index(<substring>,<start>*,<end>*) , if substribg not found- gives value error 
+	-find(<substring>,<start>*,<end>*) ,  if substribg not found- returns -1
+   	-rfind(<substring>,<start>*,<end>*),  if substribg not found- returns -1
+	-count(<substring>,<start>*,<end>*), if substribg not found- returns 0
+
+3.string conversion 
+	- capitalize()
+	-lower()
+	-upper()
+	-swapcase()
+	-title()
+	
+4. string replace
+	-replace(old ,new,count*)
+	-strip(chars*)
+
+* = optional
+
+$$$$$digits,numeraics and deccimals in python$$$$$
+1.DIGITS - subscript and subscripts
+2.NUMARICS - roman numerals,currency numerals, fraction, subscript and subscripts
+3.DECIMALS
+
+ $$ python catches the integer values in range -5 to 256 . beyond/ out of this range it create new objects for same values 
+
+ $$ the concept of object catching dosent works on 'float' or 'complex' data type but implies to string and bool
+
+
+$$$$$$$$$$$ notatoins/operators/statments in python: $$$$$                   
+                                            
+0b
+0x
+0o
+e int-- 'e' here is exponent notation, means power of 10 
+real -- for printing real part of complex data type as float value
+imag--for printing imagionary part of complex data type sa float value
+string slicing- s[start:end:step], default value of step=1
+is,is not
+in ,not in
+pass
+del
+reverse	
+
+$$$$$$$$$ keywords: total keywords in python : 33 $$$$$$$$$$
+True/1,False/0,sep,end,is,import,as,from ,def,globle,lambda
+
+
+$$$$$$$$$ total data types in python : 14 , 6 catagories	
+
+$$$$$ in python 'float' has a precisio of 16 digits  
+
+$$$$$$$$$$ some  data type in python:
+ int,float,complex,bool,str,list,tuple,dictonary
+
+
+$$$$$$ type conversion in python :
+1. implicit type conversion 
+2. explicit type conversion
+
+$$$$$ 4 ways of representing integers:
+1.  decimal base 10 (default)
+2.  binary base 2
+3. octale base 8
+4. hexadecimal base 16
+
+$$$$$$$ comment in pythons:
+#higfvuvg  {single line comment}
+ '''ssdiu
+dcuucub'''  {multiline comment...not an actual comment but an un reffered multiline string}
+
+$$$$$$$ format specifiers
+%d - int 
+%i - int 
+%f - float
+%s - string
+
+
+
+$$$$$$$$$$$ concept of object reuseability applys to only:
+1.strings
+2.boolian
+3.int(from -5 to 256)
+****float and complex dosent support this concept*****
+
+
+$$$$$$$$operators in python$$$$$$$$$$
+1.atrhmatic   +,-,*,**,/,%,//
+2.relational   <,>,<=,>=,=,==,!=
+3.logical      and,or,not
+4.bitwise      &  bitwisw AND,| bitwise OR,^ bitwise XOR,<<  left shift,>> right shift,~ bitwise 1's complinent
+5.identity     is,is not
+6.assignment    =
+7.membership    in,not in
+8.
+
+$$$$$$itrative statments$$$$$$$$$$
+1. conditional--
+	if
+	if...else
+	if...elif...else
+	nested if
+2. itrative(loops)--
+	while...else
+	for...else
+
+$$$$$$types of arguments$$$$$$$$$
+1.positional
+2.keyword
+3.default...def <fun_name>(pi=3.14)
+4.variable length...def <fun_name>(*n)
+5. kwargs--variable length arguments keywords arguments...syntex: def <func_name>(**n)
+ 
+$$$$scope in python [LEGB]$$$$
+1.local
+2.
+3.global
+4.
+
+$$$$  types of variables$$$
+1.instance/object variables
+2.local variables
+3.ststic/ class variabless
+
+$$types of data in python$$
+1.mutable...eg-list,dictonary
+2.immutable...eg-int,string,float,tuple
+
+$$$$types of functions$$$$$
+1.normal functions
+2.anonymous/lambda functions...<syntex--lambda arg1,arg2... :[expression]  >
+     -using it anonymously in inline mode
+     -using it by assigning it to a variable
+3.map() function ...
+               syntex-- map(<func_name>,itrable)
+4. filter() function...
+               syntex-- filter(function,sequence)
+
+
+
+$$$$ 'function calling' type of python -- call by object refrence
+
+$$$ every module in python consist a variable '__name__'
+    when module is run stand alone then value of '__name__' is '__main__'
+    whhen module is imported in another module then  "__name__" consists the name of corrusponding module    
+
+SOME TOPICS-
+
+object catching
+PEP- Pythin Inhancement Proposel
+prescidence and associavity in python
+command list arguments
+list COMPRIHANSION (creating list from list)... mylist={<expression> for item in itrable  <test_condition>}
+dictonary COMPRIHANSION(creating dictonary from dictonary)... dict={key:value for (key,value) in itrable <test_condition>}
+tuple--packing,unpacking
+string interpolation/ f string
+garbage collection
+encapsulation
+inheritance
+method overriding
+MRO
+dimond problem
+operator overloading
+module
+
+
+$$$$ diff b/w type error and value error
+ A TypeError occurs when an operation or function is applied to an object of inappropriate type.
+
+A ValueError occurs when a built-in operation or function receives an argument that has the right type but an inappropriate value, and the situation is not described by a more precise exception such as IndexError.
+
+
+
+
+######doubt topics############
+1. working of logical opertors with non boolian types 
+2.getsizeof() [in 'sys' module]
+3. command list argumennts (slide 16)
+4. all() function [lecture 27]
+5. sort() (lecture 28)
+6. lecture 30, slide 26
+7. endswith(), starrtswith() ,rfind() lec 35
+8. meaning of 'unhashable type error' lec 38 slide 28
+9.country management sysyem
+10. does python consist a default constructor?
+11. is self a pointer?...does pointer or refrences exist in python
+12. does memeber functions are called instance members in python?
+13. wht is the return type of constructor(_init__())? is it a class object?
+14. slide 15 lec 42
+15. diff b/w static method and class method...what is the function pf static method
+16. are ststic methods similar to virtual functions in C++
+17. code super().py not running(lec 44 slide 32)
+18. program at slide 10 lec 47
+19.lec 47 slide 29
+20. is  item 'traceback' of exc_info() function{in module 'sys'},'traceback' class{in 'traceback' module} are diffrent?

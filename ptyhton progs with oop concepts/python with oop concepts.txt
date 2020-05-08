@@ -1,0 +1,188 @@
+class <class_nanme>:
+	_
+	_	
+	.
+	.
+	_
+obj=<class_name>()
+
+					class object:
+					  |
+					  |inheritance(__init__(),__repr__(),__new__(), etc.)[imlicitely done by Python]	
+					  |
+					CLASS
+					  |	
+			______________________________________					
+			|				      |
+		class object,class dictonary	   instance objects, object/instance dictonary
+			|				      |	
+		class variables,class method(cls)       instance variables,instance methods(self)
+
+
+
+
+# for ever class PVM creates a "class object" inside which all class variables live
+# member functions are called "instance methods " which consust atLeast 1 formal argument "self"
+# "constructor" in python :
+   __init__(self)
+#self is like a "this pointer" which points to the address of object for which method is called
+# self is local to its method's body
+# a class is by deafult public
+#python dosent supports fun/method overloading...to do this default arguments are used
+
+
+$$$$  types of variables$$$
+1.instance/object variables
+2.local variables
+3.static/ class variabless
+
+
+$$$$$$ types of methods $$$$
+1. instance method-- able to acces data and propertis unique to each instance
+2. class method--can access limited methods and variable, works  upto class level, can modify class specific details
+3. static method--totally self contained code. cannot access any thing inside the class 
+
+class method can be used as factory method(method that returns a class object)-
+
+#Python has 2 types of dictionaries:
+1.class dictonary: __dict__  syntex: <class name>.__dict__ 
+2.object dictonary:__dict__  syntex: <object ref>.__dict__ 
+
+# ways to create instance variables:
+1. using self inside __init__()...self.<variable name>=value
+2. using self in any instance method...self.<variable name>=value
+3. using __dict__ attribute of object... <boj name>.__dict__[variable name(key of dictonary)]=value
+4. using object name along with dot operator outside the class... <obj name>.<variable name>=value
+
+# python is dynamacally typed lang. so we can have diff no.'s of instance variablrs for diff object of same class unlike C++ and java
+
+#ways to delete instance variables:
+1.   del self. <attribute_name> -- inside __init__() or any instance member inside the class
+2.  del <object_name>.<attribute_name> -- outside the class 
+
+# we can use/declair class variables at 6 palaces in Python:
+1.inside a class body but outside any method body
+2.inside a constructor(__init__())--syntex: <class_name>.<variavble name>=value
+3.inside an instance method--syntex: <class_name>.<variavble name>=value
+4.
+5.
+6.
+
+#ways to accessa class variable:
+1.
+2.
+3.
+4.
+
+#ways to modify class variables:
+1.
+2.
+3.
+
+#ways to delete class variables:
+1. del cls.<variable name>--  from class method
+2.del <class_name>.<attribute_name> -- from anywhere in the program
+
+$$$$$ CLASS MRTHOD: $$$$$$
+
+# syntex:
+
+class <class name>:
+	@classmethod
+	def <method name> (cls):
+  		#code 
+# call:
+<class name>.<class method name>()
+
+# cls is an attribute that points to the class object
+
+$$$$$ STATIC METHOD $$$$
+  # syntex:
+
+class <class name>:
+	@static method
+	def <method name>(arguments):
+		#code
+
+# a static methd dosent takes any implicit argument like cls 
+
+# call:
+<class name>.<static method name>()
+
+$$ to declair any method or variable as private , it  name should be prifixed with double underscore... eg: __name
+ Python actually makes this as: _<class name>__name 
+using this syntex we can access this private instance variable 'name' from object refrance ,outside the class,without any error or exception.
+Thus nothing in Python is PRIVATE!!
+
+
+$$ FUNCTIONS:
+
+1. setattr(object,"name",value)              -- used to set the value of an attribute  of an object
+2. getattr(object , "name" , [default value])-- returns the  value of an attribute of an object, 
+					   returns default value provided to  this function if no named attribute is found
+						   returns an exception ifno named attribute is found and no default value is provided to it
+3. __repr__()  --lec 43 slide 26...whenever we pass an object as an argument to function print() ,Python automatically calls function __repr__()
+4.__init__(self) -- constructor in python
+5.__del__(self) -- distructor in python
+6.super()-- used for callin the method if parent class. it it used in 2 cases:
+		- for calling constructor(__init__()) of parent class
+		-
+	   using super() function have 4 bernifits (lec 44 slide21)
+7. sisubclass(<derived class name>,<base class name>)--tells wether a class(1st argument) is a subclass/derived class of another(2nd class) 
+8. isinstance(<name of object refrence>.<name of class>)--	
+9. mro()  --by default present in every class,allows us to see MRO order ,syntex= <derived class name>.mro()
+10. __mro__  -- it is a tuple by default present in every class, allows us to see MRO order,syntex= <derived class name>.__mro__
+
+SPECIAL METHODS-built in methds containing operator definations (we need to modify them for operator overloading), these handles calls for "object as a LEFT operand" , i.e:
+11. __add__() -- handles call for  obj+obj or obj+a
+12. __sub__() -- handles call for  obj-obj or obj-a
+13. __mul__() -- handles call for  obj*obj or obj*a
+14. __pow__()-- handles call for  obj**obj or obj**a
+15. __truediv__()---- handles call for  obj/obj or obj/a
+16. __floor__() -- handles call for  obj//obj or obj//a
+17. __mod__()---- handles call for  obj%obj or obj%a
+
+REVERSE /REFLECTED SPECIAL METHODS-built in methds containing operator definations (we need to modify them for operator overloading), these handles calls for "object as a RIGHT operand" , i.e: 
+18. __radd__() -- handles call for  obj+obj or a+obj
+19. __rsub__() -- handles call for  obj-obj or a-obj
+20. __rmul__() -- handles call for  obj*obj or a*obj
+21. __rpow__()-- handles call for  obj**obj or a**obj
+22. __rtruediv__()---- handles call for  obj/obj or a/obj
+23. __rfloor__() -- handles call for  obj//obj or a//obj
+24. __rmod__()---- handles call for  obj%obj or a%obj
+
+SPECIAL METHODS-built in methds containing  relational operator definations (we need to modify them for operator overloading)
+__lt__()-- p1<p2 
+__gt__()--p2>p2
+__le__()--p1<=p2
+__ge__()--p1>=p2
+__eq__()--p1==p2
+__ne__()--p1!=p2
+
+SPECIAL METHODS-built in methds containing shoethened operator definations (we need to modify them for operator overloading):
+ __iadd__() -- p1+=p2 
+ __isub__() -- p1-=p2
+ __imul__() --  p1*=p2
+__ipow__()-- p1**=p2
+ __itruediv__()-- p1/=p2
+ __ifloor__() --p1//=p2
+ __imod__()--p1%=p2
+
+
+where 'a' is not the instance of concerned class
+
+$$inheritance in python:
+  class base:
+	#code
+
+ class derived(base):
+	#code
+
+$$to call the base class  version of  overwridden function:
+   <base class name>.<method name>(derived class object) 
+
+$$ ambiguility arising in hybrid inheritance --  DIAMOND PROBLEM
+   -to solve it Python uses MRO and the function super()
+
+$$ Multiple Resolution Order (MRO)--rule for order of searching a method in base classes in  the case of multiple inheritance to solve diamond problem
+                                    rule--current class,searching in super classes {left to right},depth first
